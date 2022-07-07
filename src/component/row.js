@@ -10,7 +10,7 @@ function RowDemo(props) {
         <div key={props.title} type={props.title}>
             {props.columns && <> {
                 props.columns.map((column, key) => (
-                    <Column key={key} title={"column "+key} articles={column.articles} />
+                    <Column key={key} articles={column.articles} imageUrl={column.imageUrl} title={column.title} url={column.url} width={column.width}/>
                 ))
             }
             </>}
