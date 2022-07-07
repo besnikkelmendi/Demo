@@ -32,7 +32,7 @@ function Column(props) {
                     <div className="card-body">
                         <a href={props.url}>
 
-                            <img src={props.imageUrl} className="card-img" alt={props.title} height="100%" />
+                            <img src={props.imageUrl} className="card-img" alt={props.title}/>
 
                         </a>
                         {isEdit ? 
@@ -44,7 +44,7 @@ function Column(props) {
         
                             :
                             <>
-                                <h4 className="text-center" href={props.url}>{title}</h4>
+                                <a href={props.url}><h4 className="text-center">{title}</h4></a>
                                 <button type="button" className="btn btn-primary btn-sm btn-block" onClick={onEditHandler}>Edit</button>
                             </>
                         }

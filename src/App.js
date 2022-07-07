@@ -1,6 +1,7 @@
 import './App.css';
 import RowDemo from './component/row';
 import React from "react";
+import NavBar from './component/nav';
 
 
 
@@ -24,14 +25,14 @@ function App() {
 
   console.log(articles)
   return (
-    <div>
-
+    <>
+      <NavBar/>
       {articles && <> {
       articles.map((row, key) => (
         <RowDemo key={key} title={"row "+key} columns={row.columns} />
       ))}
 </>}
-    </div>
+    </>
   )
 }
 
