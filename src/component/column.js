@@ -28,11 +28,11 @@ function Column(props) {
         <div key={props.title} type="article" className={"col-lg-" + props.width}>
 
             {props &&
-                <div className="thumbnail">
+                <div>
                     <div className="card-body">
                         <a href={props.url}>
 
-                            <img src={props.imageUrl} className="card-img" alt={props.title}/>
+                            <img src={props.imageUrl+"&height=700"+"&width="+props.width*200} className="card-img" alt={props.title}/>
 
                         </a>
                         {isEdit ? 
